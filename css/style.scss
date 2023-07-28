@@ -1,0 +1,616 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url(../assets/fonts/Roboto-Regular.ttf);
+}
+
+body {
+  font-family: Roboto;
+}
+
+// Common Styles
+.category-and-sharing {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+  .category {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    opacity: 0.5;
+  }
+  .share-icon {
+    width: 20px;
+    @media screen and (min-width: 1024px) {
+      path {
+        fill: #fff;
+      }
+    }
+  }
+}
+
+.desktop-card-gradient {
+  width: 83%;
+  height: 4px;
+  position: absolute;
+  left: 50%;
+  top: 100.4%;
+  transform: translate(-50%, -50%);
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  background: linear-gradient(90deg, #ea14ec -2.04%, #1246ce 102.14%);
+  @media screen and (max-width: 575px) {
+    display: none;
+  }
+}
+
+.main-article-gradient {
+  top: 99.6%;
+}
+
+.match-detail-section {
+  padding: 0 15px;
+  position: relative;
+
+  background-image: url("../assets/images/Mobile\ Top\ BG.svg"); /* fallback */
+  background-image: url("../assets/images/Mobile\ Top\ BG.svg"),
+    linear-gradient(146.92deg, #ea14ec -2.59%, #1246ce 100.83%);
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  // responsive screens css for match detail section starts
+  @media screen and (min-width: 575px) {
+    padding: 23px 32px 0;
+  }
+
+  @media screen and (min-width: 767px) {
+    background-image: url("../assets/images/Tablet\ Top\ BG.svg"); /* fallback */
+    background-image: url("../assets/images/Tablet\ Top\ BG.svg"),
+      linear-gradient(146.92deg, #ea14ec -2.59%, #1246ce 100.83%);
+    padding: 0 62px;
+    background-size: cover;
+  }
+
+  @media screen and (min-width: 1024px) {
+    background-image: url("../assets/images/Desktop\ Top\ BG.svg"); /* fallback */
+    background-image: url("../assets/images/Desktop\ Top\ BG.svg"),
+      linear-gradient(146.92deg, #ea14ec -2.59%, #1246ce 100.83%);
+    padding: 0 248px;
+    background-size: cover;
+  }
+
+  @media screen and (min-width: 1220px) {
+    background-image: url("../assets/images/Desktop\ Top\ BG.svg"); /* fallback */
+    background-image: url("../assets/images/Desktop\ Top\ BG.svg"),
+      linear-gradient(146.92deg, #ea14ec -2.59%, #1246ce 100.83%);
+    padding: 0 248px;
+    background-size: cover;
+  }
+
+  // Background image styling started
+
+  .banner-background-image {
+    .banner-image {
+      position: absolute;
+    }
+  }
+
+  // Background image styling ended
+
+  // responsive screens css for match detail section ends
+
+  .match-date-location-wrapper {
+    padding: 32px 0;
+
+    .match-details {
+      text-align: center;
+
+      .ball-icon {
+        width: 21px;
+        position: relative;
+        top: 6.4px;
+      }
+      .playing-team-details {
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 17px;
+        letter-spacing: 0em;
+        text-align: center;
+        color: #fff;
+        display: inline;
+        @media screen and (min-width: 767px) {
+          font-size: 16px;
+        }
+      }
+    }
+    // Date and Time styling starts
+    .date-time-wrapper {
+      .date-time {
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 17px;
+        letter-spacing: 0em;
+        text-align: center;
+        color: #fff;
+        margin-top: 14px;
+        @media screen and (min-width: 767px) {
+          font-size: 14px;
+        }
+      }
+    }
+    // Date and Time styling ends
+
+    // Live Status styling starts
+
+    .live-status-wrapper {
+      position: relative;
+      margin-top: 24px;
+      .line {
+        width: 100%;
+        height: 1px;
+        background-color: #fff;
+        opacity: 0.2;
+        @media screen and (min-width: 767px) {
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+        }
+      }
+      .live-icon {
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 12px;
+        letter-spacing: 0em;
+        text-align: center;
+        padding: 6px 10px;
+        border-radius: 20px;
+        background-color: #008632;
+        color: #fff;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        .icon {
+          width: 9px;
+          margin-right: 10px;
+        }
+      }
+    }
+
+    // Live Status styling ends
+  }
+
+  // score detail styling
+
+  .team-score-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    column-gap: 12px;
+    padding-bottom: 15px;
+    .away-team-wrapper {
+      flex-direction: row-reverse;
+    }
+    .team-detail-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      row-gap: 9px;
+      column-gap: 9px;
+    }
+    .team-logo-container {
+      padding: 10px;
+      background-color: #fff;
+      border-radius: 98px;
+      width: 59px;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      @media screen and (min-width: 767px) {
+        width: 132px;
+        height: 130px;
+      }
+      .team-logo {
+        width: 37px;
+        @media screen and (min-width: 767px) {
+          width: 88px;
+        }
+      }
+    }
+    .score-detail {
+      .first-row {
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 10px;
+        letter-spacing: 0em;
+        text-align: left;
+        padding: 9px 0;
+        border-bottom: 1px solid #ffffff46;
+        @media screen and (min-width: 767px) {
+          font-size: 28px;
+        }
+
+        span {
+          font-size: 10px;
+          font-weight: 400;
+          line-height: 12px;
+          letter-spacing: 0em;
+          text-align: left;
+          @media screen and (min-width: 767px) {
+            font-size: 12px;
+          }
+        }
+      }
+      .second-row {
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 10px;
+        letter-spacing: 0em;
+        text-align: left;
+        padding: 16px 0 9px;
+        border-bottom: 1px solid #ffffff46;
+        @media screen and (min-width: 767px) {
+          font-size: 20px;
+        }
+        span {
+          font-size: 10px;
+          font-weight: 400;
+          line-height: 12px;
+          letter-spacing: 0em;
+          text-align: left;
+          @media screen and (min-width: 767px) {
+            font-size: 12px;
+          }
+        }
+      }
+      .third-row {
+        border: none;
+      }
+    }
+  }
+  //   Score Detail styling ends
+
+  //   Need to win caption styling starts
+
+  .need-to-win-wrapper {
+    text-align: center;
+    position: relative;
+    .line {
+      width: 100%;
+      height: 1px;
+      background-color: #f5f5f5;
+      position: absolute;
+      top: -4px;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      opacity: 0.2;
+      @media screen and (min-width: 575px) {
+        width: 50%;
+      }
+    }
+    .line2 {
+      width: 100%;
+      height: 1px;
+      background-color: #f5f5f5;
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      opacity: 0.2;
+
+      @media screen and (min-width: 575px) {
+        width: 50%;
+      }
+    }
+    .need-to-win-caption {
+      font-size: 12px;
+      font-weight: 500;
+      line-height: 16px;
+      letter-spacing: 0em;
+      text-align: center;
+      color: #fff;
+      padding: 14px 0;
+      // border-bottom: 1px solid #ffffff46;
+      // border-top: 1px solid #ffffff46;
+      @media screen and (min-width: 767px) {
+        font-size: 16px;
+      }
+    }
+  }
+  //   Need to win caption styling ends
+
+  //   Stadium location styling starts
+  .stadium-location-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 9px;
+    margin-top: 14px;
+    .stadium-icon {
+      width: 15px;
+    }
+    .location-text {
+      display: inline;
+
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 16px;
+      letter-spacing: 0em;
+      text-align: center;
+      color: #fff;
+      @media screen and (min-width: 767px) {
+        font-size: 14px;
+      }
+    }
+  }
+  //   Stadium location styling ends
+
+  //   Batters and Bowler Styling starts
+  .batters-bowlers-wrapper {
+    margin-top: 24px;
+    color: #fff;
+    padding-bottom: 32px;
+    .bowlers {
+      margin-top: 15px;
+    }
+    .batters {
+      .title {
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 16px;
+        letter-spacing: 0px;
+        text-align: left;
+      }
+      .player-score-container {
+        padding: 8px 16px 8px 24px;
+        background-color: #fff;
+        border-radius: 10px;
+        display: flex;
+        margin-top: 9px;
+        justify-content: space-between;
+        align-items: center;
+        .divider {
+          width: 1px;
+          background-color: #1f1f1f;
+          opacity: 0.2;
+          height: 39px;
+        }
+        .scored-runs {
+          color: #1c1c28;
+          font-size: 14px;
+          font-weight: 500;
+          line-height: 16px;
+          letter-spacing: 0em;
+          @media screen and (min-width: 767px) {
+            font-size: 16px;
+          }
+          .player-score {
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 18px;
+            letter-spacing: 0em;
+            color: #e50695;
+            @media screen and (min-width: 767px) {
+              font-size: 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+  //   Batters and Bowler Styling ends
+}
+
+// Latest Updates Section styling starts
+.latest-update-section {
+  padding: 23px 10px 0;
+  @media screen and (min-width: 575px) {
+    padding: 23px 32px 0;
+  }
+  // responsive screens css starts
+  @media screen and (min-width: 767px) {
+    padding: 40px 60px 15px;
+  }
+  @media screen and (min-width: 1024px) {
+    padding: 40px 135px 20px;
+  }
+
+  .latest-update-row {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    padding-bottom: 20px;
+    .title {
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 23px;
+      letter-spacing: 0em;
+      color: #1c1c28;
+      display: inline;
+    }
+    .see-more-anchor {
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 19px;
+      letter-spacing: 0em;
+      color: #e50695;
+    }
+  }
+  //   News Cards Styling starts
+  .news-cards-wrapper {
+    .main-card-row {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+      grid-gap: 9px;
+      @media screen and (min-width: 575px) {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      }
+      @media screen and (min-width: 767px) {
+        grid-template-columns: repeat(auto-fill, minmax(319px, 1fr));
+      }
+      @media screen and (min-width: 1024px) {
+        grid-template-columns: repeat(auto-fill, minmax(370px, 1fr));
+      }
+      @media screen and (min-width: 1220px) {
+        grid-template-columns: repeat(auto-fill, minmax(470px, 1fr));
+      }
+
+      .n-card {
+        position: relative;
+        .card-image {
+          position: relative;
+          .team-photo {
+            width: 100%;
+            border-radius: 5px;
+          }
+          .image-overlay {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            bottom: 1%;
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+          }
+          @media screen and (min-width: 767px) {
+            .image-overlay {
+              background: linear-gradient(
+                0deg,
+                #0f1c70 -4%,
+                rgba(45, 65, 207, 0) 58.15%
+              );
+            }
+          }
+        }
+        .news-title-container {
+          padding: 15px;
+          background-color: #f5f5f5;
+          .title {
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 24px;
+            letter-spacing: 0em;
+          }
+          @media screen and (min-width: 1024px) {
+            position: absolute;
+            bottom: 1%;
+            background-color: transparent;
+            color: #fff;
+          }
+        }
+        .gradient-border {
+          width: 100%;
+          height: 4px;
+          border-bottom-left-radius: 4px;
+          border-bottom-right-radius: 4px;
+          background: linear-gradient(90deg, #ea14ec -2.04%, #1246ce 102.14%);
+          @media screen and (min-width: 1024px) {
+            position: absolute;
+            left: 50%;
+            top: 99.6%;
+            transform: translate(-50%, -50%);
+            width: 88%;
+          }
+        }
+      }
+    }
+    // Articles
+    .articles-row {
+      margin-top: 30px;
+      @media screen and (min-width: 500px) {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        grid-gap: 9px;
+      }
+      @media screen and (min-width: 767px) {
+        grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+        margin-top: 16px;
+      }
+      @media screen and (min-width: 1024px) {
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      }
+      @media screen and (min-width: 1205px) {
+        grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+      }
+      @media screen and (min-width: 1456px) {
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      }
+      .article-card {
+        display: flex;
+        background-color: #f5f5f5;
+        border-radius: 5px;
+        margin-bottom: 17px;
+        position: relative;
+        @media screen and (min-width: 500px) {
+          flex-direction: column-reverse;
+        }
+
+        .card-title-container {
+          padding: 15px;
+          .article-title {
+            font-size: 12px;
+            font-weight: 500;
+            line-height: 20px;
+            letter-spacing: 0em;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            display: -webkit-box;
+          }
+        }
+        .article-image-container {
+          position: relative;
+          .article-img {
+            width: 127px;
+            border-radius: 5px;
+            height: 100%;
+            object-fit: cover;
+            @media screen and (min-width: 500px) {
+              width: 100%;
+            }
+          }
+          .article-overlay {
+            background: linear-gradient(
+              0deg,
+              #000000 -4%,
+              rgba(50, 50, 50, 0) 58.15%
+            );
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-bottom-left-radius: 4px;
+            border-bottom-right-radius: 4px;
+          }
+          .gradient-image-border {
+            width: 83%;
+            height: 4px;
+            background: linear-gradient(90deg, #ea14ec -2.04%, #1246ce 102.14%);
+            position: absolute;
+            left: 50%;
+            top: 101.5%;
+            transform: translate(-50%, -50%);
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+            @media screen and (min-width: 576px) {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+  //   News Cards Styling ends
+}
+// Latest Updates Section styling ends
